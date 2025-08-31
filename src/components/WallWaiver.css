@@ -53,11 +53,16 @@
   color: #676D79;
   width: min(600px, 70%);
   margin: 0 auto;
-  padding-top: 4%;
+  padding-top: 2%;
   padding-bottom: 2%;
   text-align: center;
   z-index: 1;
   align-self: center;
+}
+@media (max-width: 600px) {
+  .wall-waiver-text {
+    padding-top: 4%;
+  }
 }
 
 /* Responsive widths for smaller screens */
