@@ -6,6 +6,7 @@
   padding: 5% 8%;
   text-align: left;
   margin-top: 30vh;
+
 }
 
 /* NEW: Map link button styling */
@@ -329,6 +330,9 @@
     padding: 0.5px 12px;
     font-size: clamp(11px, 3vw, 13px); /* shrink highlight text */
   }
+  .location-container {
+  margin-top: 20vh;
+}
 }
 
 @media (max-width: 480px) {

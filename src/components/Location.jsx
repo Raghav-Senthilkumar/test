@@ -36,7 +36,7 @@ export default function Location() {
           </span>
           <br />
           <a
-            href="https://www.google.com/maps/place/Geary+F.+Eppley+Recreation+Center,+4128+Valley+Dr,+College+Park,+MD+20742/"
+            href="https://www.google.com/maps/place/ERC+Climbing+Wall/@38.9942976,-76.9456925,19.74z/data=!4m6!3m5!1s0x89b7c69eb76f0bcb:0xd4c9d1463d18c841!8m2!3d38.9941981!4d-76.9458185!16s%2Fg%2F11bzwqrsvk?entry=ttu&g_ep=EgoyMDI1MDgzMC4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className="map-link"

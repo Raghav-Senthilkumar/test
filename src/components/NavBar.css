@@ -8,6 +8,7 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
   background-color: transparent;
   transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+  overflow-y: hidden;
 }
 
 .navbar-scrolled {

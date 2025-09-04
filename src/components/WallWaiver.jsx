@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './WallWaiver.css';
 import Footer from './Footer';
 
@@ -22,18 +22,37 @@ const WaiverIcon = () => (
 );
 
 const WallWaiver = () => {
+  const containerRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="wall-waiver-container">
-      <div className="wall-waiver-logo">
+    <div ref={containerRef} className={`wall-waiver-container${visible ? ' animate' : ''}`}>
+      <div className={`wall-waiver-logo${visible ? ' animate' : ''}`}>
         <img src="/logo_2.jpg" alt="Club Logo" />
       </div>
-      <h2 className="wall-waiver-heading">Wall Waiver</h2>
-      <p className="wall-waiver-text">
-        To be a part of the club and join us for any climbing activities, you must sign the wall waiver.
-        It's required for all participants.
+      <h2 className={`wall-waiver-heading${visible ? ' animate' : ''}`}>Wall Waiver and IMLeagues</h2>
+      <p className={`wall-waiver-text${visible ? ' animate' : ''}`}>
+       To be a part of the club and climb on the outdoor wall, you must sign the wall waiver and register on IMLeagues. This is required for all members.
       </p>
-      <a
-        className="wall-waiver-button"
+      <div className="wall-waiver-separator">
+        <a
+        className={`wall-waiver-button${visible ? ' animate' : ''}`}
         href="https://waiver.smartwaiver.com/w/5a709bf63bfd5/web/"
         target="_blank"
         rel="noopener noreferrer"
@@ -41,7 +60,17 @@ const WallWaiver = () => {
         <WaiverIcon />
         Sign Waiver
       </a>
-      <p className="wall-waiver-footer">
+      <a
+        className={`wall-waiver-button${visible ? ' animate' : ''}`}
+        href="https://waiver.smartwaiver.com/w/5a709bf63bfd5/web/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <WaiverIcon />
+        IMLeagues
+      </a>
+      </div>
+      <p className={`wall-waiver-footer${visible ? ' animate' : ''}`}>
         © 2025 CCC. Built with React. All rights reserved.
       </p>
     </div>
