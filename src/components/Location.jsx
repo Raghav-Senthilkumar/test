@@ -30,11 +30,9 @@ export default function Location() {
       <div className={`Location ${visible ? "in-view" : ""}`}>
         <div className="text">
           <h2>Location/Times</h2>
-          <h1>Climbing Sessions</h1>
+          <h1>Club Meetings</h1>
           <span className="info">
-            We offer both indoor climbing at Eppley Recreational Center and
-            outdoor mountain adventures. Our club meets every Thursday and
-            Sunday to connect and climb.
+            We have club meetings at the ERC Climbing Wall, located outside of the Eppley Recreation Center, every Sunday, Tuesday, and Thursday from 8–10 PM to connect and climb.
           </span>
           <br />
           <a
@@ -52,16 +50,15 @@ export default function Location() {
           <div className="map-mask">
             <iframe
               title="Eppley Recreation Center Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3107.502141337264!2d-76.9452!3d38.9936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c69fdb72f229%3A0x1c50f4db7a7f6f0!2sGeary%20F.%20Eppley%20Recreation%20Center!5e0!3m2!1sen!2sus!4v1693135112345!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d99229.6545660806!2d-77.02821850895909!3d38.994169122715405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x89b7c69eb76f0bcb%3A0xd4c9d1463d18c841!2sERC%20Climbing%20Wall%2C%20College%20Park%2C%20MD!3m2!1d38.9941981!2d-76.9458185!4m5!1s0x89b7c69eb76f0bcb%3A0xd4c9d1463d18c841!2sCollege%20Park%2C%20MD%2020742!3m2!1d38.9941981!2d-76.9458185!5e0!3m2!1sen!2sus!4v1756990464054!5m2!1sen!2sus"
               width="100%"
               height="98%"
               style={{ border: 0 }}
               allowFullScreen=""
-              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-
+ 
           <img
             className="phone-frame"
             src={iphoneFrame}

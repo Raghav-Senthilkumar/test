@@ -5,12 +5,12 @@ import climbingbigHold from '../assets/big_hold.png';
 import climbingsmallHold from '../assets/small_hold.png'; 
 
 // Import a unique image for each leader.
-import skylarImage from '../assets/small_hold.png';
-import benjaminImage from '../assets/big_hold.png'; 
-import amudhaImage from '../assets/white_hold_1.png';
-import jackieImage from '../assets/small_hold.png';
-import nicholasImage from '../assets/big_hold.png'; 
-import lexieImage from  '../assets/white_hold_1.png';
+import skylarImage from '/ccc-climbing-club-skylar.jpg';
+import benjaminImage from '/ccc-climbing-club-ben.jpg'; 
+import amudhaImage from '/ccc-climbing-club-amudha.jpg';
+import jackieImage from '/ccc-climbing-club-jackie.jpg';
+import nicholasImage from '/ccc-climbing-club-nicholas.jpg'; 
+import lexieImage from  '/ccc-climbing-club-lexie.jpg';
 
 // Updated data with a unique image for each leader.
 const leadershipData = [
@@ -40,8 +40,29 @@ export default function LeadershipHeading() {
   return (
     <div>
       <div className="box">
-        {/* Dynamic background image */}
-     
+  {/* Background with animation */}
+  <AnimatePresence mode="wait">
+  <motion.div
+    key={currentPerson.image}
+    initial={{ opacity: 0, scale: 1.1 }}
+    animate={{ opacity: 1, scale: 1, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+    exit={{ opacity: 0, scale: 0.95, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      backgroundImage: `url(${currentPerson.image})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      borderRadius: "inherit",
+      zIndex: 0,
+      boxShadow: "0 0 15px 3px rgba(255, 255, 255, 0.12)"
+    }}
+  />
+</AnimatePresence>
+
 
         {/* AnimatePresence for title */}
         <AnimatePresence mode="wait">
@@ -102,23 +123,35 @@ export default function LeadershipHeading() {
           </motion.div>
         </AnimatePresence>
 
-        {/* The big hold with hover animation */}
-        <motion.img 
-          src={climbingbigHold} 
-          alt="Climbing Hold" 
-          className="big" 
-          whileHover={{ scale: 1.15, rotate: 8, y: -15 }}
-          transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        />
-        
-        {/* The small hold with hover animation */}
-        <motion.img 
-          src={climbingsmallHold} 
-          alt="Climbing Hold"
-          className="small"
-          whileHover={{ scale: 1.15, rotate: 8, y: -15 }}
-          transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        />
+    
+{/* Big Hold */}
+<AnimatePresence mode="wait">
+  <motion.img
+    key={currentPerson.pres + "-big"} // unique key per leader
+    src={climbingbigHold}
+    alt="Big Climbing Hold"
+    className="big"
+    initial={{ y: 40, opacity: 0 }}
+    animate={{ y: 0, opacity: 1, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+    exit={{ y: -40, opacity: 0, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+    whileHover={{ scale: 1.15, rotate: 8, y: -15 }}
+  />
+</AnimatePresence>
+
+{/* Small Hold */}
+<AnimatePresence mode="wait">
+  <motion.img
+    key={currentPerson.pres + "-small"} // unique key per leader
+    src={climbingsmallHold}
+    alt="Small Climbing Hold"
+    className="small"
+    initial={{ y: 40, opacity: 0 }}
+    animate={{ y: 0, opacity: 1, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+    exit={{ y: -40, opacity: 0, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+    whileHover={{ scale: 1.15, rotate: 8, y: -15 }}
+  />
+</AnimatePresence>
+
 
         {/* Arrow button */}
         <div className="arrow-container" onClick={handleClick}>

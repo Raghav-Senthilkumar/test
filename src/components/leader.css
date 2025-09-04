@@ -1,8 +1,6 @@
  .box {
      width: 407.7px;
   height: 404.1px;
-     background-color: #cccccc;
-     border: 1px solid #999999;
      margin: 0 auto; /* Redundant for horizontal centering */
      display: flex;
      margin-top: 5vh; /* Valid for vertical spacing */
@@ -11,6 +9,9 @@
      color: #333;
      position: relative; /* CRITICAL: Enables positioning for children */
      z-index: 1;
+     background-size: cover;
+     border-radius: 10px;
+   
  }
 
  /* The following elements are now positioned relative to the `.box` container */

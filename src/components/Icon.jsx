@@ -12,7 +12,7 @@ const Icon = ({ marginTop = '10%' }) => {
           <img src={Ellipse} alt="Ellipse background" />
           <img src={Mountain} alt="Mountain icon" />
         </div>
-        <h3>Free Climbing Lessons</h3>
+        <h3>Club Meetings</h3>
       </div>
 
       <div className='carabiner'>
@@ -20,7 +20,7 @@ const Icon = ({ marginTop = '10%' }) => {
           <img src={Ellipse} alt="Ellipse background" />
           <img src={Carabiner} alt="Carabiner icon" />
         </div>
-        <h3>Gear Renting</h3>
+        <h3>Gear Provided</h3>
       </div>
 
       <div className='globe'>
@@ -28,7 +28,7 @@ const Icon = ({ marginTop = '10%' }) => {
           <img src={Ellipse} alt="Ellipse background" />
           <img src={Globe} alt="Globe icon" />
         </div>
-        <h3>Outdoor Adventures</h3>
+        <h3>Outdoor Trips</h3>
       </div>
     </div>
   );
