@@ -107,7 +107,7 @@ function App() {
       <section id="gallery">
         <Text
           highlight="Gallery"
-          title="Our Adventures"
+          title="Our Outdoor Adventures"
           description="Where our club has climbed, explored, and enjoyed the great outdoors."
           marginTop="10vh"
           titleColor="#FFFFFF"

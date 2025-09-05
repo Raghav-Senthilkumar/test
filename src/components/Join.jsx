@@ -55,7 +55,7 @@ export default function Join() {
         <Text
           highlight="Join Us"
           title="Join the Journey"
-          description="Connect on GroupMe for live updates and campus events, sign up on IMLeagues, and sign the wall waiver"
+          description="For upcoming events and questions about the club, follow our Instagram and join our club-wide GroupMe"
           marginTop="100px"
           titleColor="#FFFFFF"
           descColor="#A5ABB6"
